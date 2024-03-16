@@ -16,6 +16,10 @@
 		D70A7D552B8E9D8900DCD95B /* TaskTrailTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70A7D542B8E9D8900DCD95B /* TaskTrailTests.swift */; };
 		D70A7D5F2B8E9D8900DCD95B /* TaskTrailUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70A7D5E2B8E9D8900DCD95B /* TaskTrailUITests.swift */; };
 		D70A7D612B8E9D8900DCD95B /* TaskTrailUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70A7D602B8E9D8900DCD95B /* TaskTrailUITestsLaunchTests.swift */; };
+		D70A7D6E2B8EA1CC00DCD95B /* TaskTrail.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D70A7D6D2B8EA1CC00DCD95B /* TaskTrail.jpg */; };
+		D70A7D702B8EA5F000DCD95B /* GBCLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = D70A7D6F2B8EA5F000DCD95B /* GBCLogo.png */; };
+		D7A8122C2B8EB68800166D4B /* TaskListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A8122B2B8EB68800166D4B /* TaskListController.swift */; };
+		D7A8122E2B8EB6A800166D4B /* TaskCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A8122D2B8EB6A800166D4B /* TaskCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +53,10 @@
 		D70A7D5A2B8E9D8900DCD95B /* TaskTrailUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TaskTrailUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D70A7D5E2B8E9D8900DCD95B /* TaskTrailUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTrailUITests.swift; sourceTree = "<group>"; };
 		D70A7D602B8E9D8900DCD95B /* TaskTrailUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTrailUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D70A7D6D2B8EA1CC00DCD95B /* TaskTrail.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = TaskTrail.jpg; path = ../../../../Downloads/TaskTrail.jpg; sourceTree = "<group>"; };
+		D70A7D6F2B8EA5F000DCD95B /* GBCLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = GBCLogo.png; path = ../../../../Downloads/GBCLogo.png; sourceTree = "<group>"; };
+		D7A8122B2B8EB68800166D4B /* TaskListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListController.swift; sourceTree = "<group>"; };
+		D7A8122D2B8EB6A800166D4B /* TaskCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,7 +111,11 @@
 				D70A7D3F2B8E9D8700DCD95B /* SceneDelegate.swift */,
 				D70A7D412B8E9D8700DCD95B /* ViewController.swift */,
 				D70A7D432B8E9D8700DCD95B /* Main.storyboard */,
+				D7A8122B2B8EB68800166D4B /* TaskListController.swift */,
+				D7A8122D2B8EB6A800166D4B /* TaskCell.swift */,
 				D70A7D462B8E9D8800DCD95B /* Assets.xcassets */,
+				D70A7D6F2B8EA5F000DCD95B /* GBCLogo.png */,
+				D70A7D6D2B8EA1CC00DCD95B /* TaskTrail.jpg */,
 				D70A7D482B8E9D8800DCD95B /* LaunchScreen.storyboard */,
 				D70A7D4B2B8E9D8800DCD95B /* Info.plist */,
 			);
@@ -233,7 +245,9 @@
 			files = (
 				D70A7D4A2B8E9D8800DCD95B /* LaunchScreen.storyboard in Resources */,
 				D70A7D472B8E9D8800DCD95B /* Assets.xcassets in Resources */,
+				D70A7D702B8EA5F000DCD95B /* GBCLogo.png in Resources */,
 				D70A7D452B8E9D8700DCD95B /* Main.storyboard in Resources */,
+				D70A7D6E2B8EA1CC00DCD95B /* TaskTrail.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,7 +274,9 @@
 			files = (
 				D70A7D422B8E9D8700DCD95B /* ViewController.swift in Sources */,
 				D70A7D3E2B8E9D8700DCD95B /* AppDelegate.swift in Sources */,
+				D7A8122C2B8EB68800166D4B /* TaskListController.swift in Sources */,
 				D70A7D402B8E9D8700DCD95B /* SceneDelegate.swift in Sources */,
+				D7A8122E2B8EB6A800166D4B /* TaskCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
