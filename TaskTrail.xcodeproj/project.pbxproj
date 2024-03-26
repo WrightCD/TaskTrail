@@ -20,6 +20,7 @@
 		D70A7D702B8EA5F000DCD95B /* GBCLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = D70A7D6F2B8EA5F000DCD95B /* GBCLogo.png */; };
 		D70BE0EE2BB24A3900A363FA /* TrailTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70BE0ED2BB24A3900A363FA /* TrailTask.swift */; };
 		D70BE0F02BB24A6200A363FA /* TrailCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70BE0EF2BB24A6200A363FA /* TrailCategory.swift */; };
+		D70BE0F22BB2502B00A363FA /* TaskTypeMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70BE0F12BB2502B00A363FA /* TaskTypeMaker.swift */; };
 		D7A8122C2B8EB68800166D4B /* TaskListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A8122B2B8EB68800166D4B /* TaskListController.swift */; };
 		D7A8122E2B8EB6A800166D4B /* TaskCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A8122D2B8EB6A800166D4B /* TaskCell.swift */; };
 /* End PBXBuildFile section */
@@ -59,6 +60,7 @@
 		D70A7D6F2B8EA5F000DCD95B /* GBCLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = GBCLogo.png; path = ../../../../Downloads/GBCLogo.png; sourceTree = "<group>"; };
 		D70BE0ED2BB24A3900A363FA /* TrailTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrailTask.swift; sourceTree = "<group>"; };
 		D70BE0EF2BB24A6200A363FA /* TrailCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrailCategory.swift; sourceTree = "<group>"; };
+		D70BE0F12BB2502B00A363FA /* TaskTypeMaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTypeMaker.swift; sourceTree = "<group>"; };
 		D7A8122B2B8EB68800166D4B /* TaskListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListController.swift; sourceTree = "<group>"; };
 		D7A8122D2B8EB6A800166D4B /* TaskCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -115,6 +117,7 @@
 				D70A7D3F2B8E9D8700DCD95B /* SceneDelegate.swift */,
 				D70A7D412B8E9D8700DCD95B /* ViewController.swift */,
 				D70A7D432B8E9D8700DCD95B /* Main.storyboard */,
+				D70BE0F12BB2502B00A363FA /* TaskTypeMaker.swift */,
 				D70BE0ED2BB24A3900A363FA /* TrailTask.swift */,
 				D70BE0EF2BB24A6200A363FA /* TrailCategory.swift */,
 				D7A8122B2B8EB68800166D4B /* TaskListController.swift */,
@@ -281,6 +284,7 @@
 				D70A7D422B8E9D8700DCD95B /* ViewController.swift in Sources */,
 				D70BE0EE2BB24A3900A363FA /* TrailTask.swift in Sources */,
 				D70A7D3E2B8E9D8700DCD95B /* AppDelegate.swift in Sources */,
+				D70BE0F22BB2502B00A363FA /* TaskTypeMaker.swift in Sources */,
 				D70BE0F02BB24A6200A363FA /* TrailCategory.swift in Sources */,
 				D7A8122C2B8EB68800166D4B /* TaskListController.swift in Sources */,
 				D70A7D402B8E9D8700DCD95B /* SceneDelegate.swift in Sources */,

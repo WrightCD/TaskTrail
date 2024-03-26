@@ -12,13 +12,15 @@ class TrailTask {
     var task: String
     var dueDate: Date
     var category: TrailCategory
+    var difficulty: Int
     var priority: Int
     var completed: Bool
 
-    init(id: Int, task: String, dueDate: Date, category: TrailCategory, priority: Int, completed: Bool) {
+    init(id: Int, task: String, dueDate: Date, category: TrailCategory, difficulty: Int, priority: Int, completed: Bool) {
         self.id = id
         self.task = task
         self.dueDate = dueDate
+        self.difficulty = difficulty
         self.category = category
         self.priority = priority
         self.completed = completed
