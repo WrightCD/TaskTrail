@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreData
 
 class TaskTypeMaker: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -53,36 +54,57 @@ class TaskTypeMaker: UIViewController, UIPickerViewDelegate, UIPickerViewDataSou
     
     @IBAction func createButtonTapped(_ sender: UIButton) {
         //Checking valid input
-        guard let name = nameBox.text, !name.isEmpty else {
-            showAlert(message: "Please fill in all criteria")
-            return
-        }
-            
-        guard name.count <= 16 else {
-            showAlert(message: "Name should not be larger than 16 characters")
-            return
-        }
-            
-        guard let colour = coloursBox.text, !colour.isEmpty, colours.contains(colour) else {
-            showAlert(message: "Please select a valid colour")
-            return
-        }
-            
-        guard let desc = descBox.text, !desc.isEmpty else {
-            showAlert(message: "Please fill in all criteria")
-            return
-        }
-            
-        guard desc.count <= 100 else {
-            showAlert(message: "Description should not be larger than 100 characters")
-            return
-        }
-        
-        // Success
-        let message = "Name: \(name)\nColour: \(colour)\nDescription: \(desc)"
-        print(message)
-        showAlert(message: "Task Category \(name) created")
-    }
+                guard let name = nameBox.text, !name.isEmpty else {
+                    showAlert(message: "Please fill in all criteria")
+                    return
+                }
+                    
+                guard name.count <= 16 else {
+                    showAlert(message: "Name should not be larger than 16 characters")
+                    return
+                }
+                    
+                guard let colour = coloursBox.text, !colour.isEmpty, colours.contains(colour) else {
+                    showAlert(message: "Please select a valid colour")
+                    return
+                }
+                    
+                guard let desc = descBox.text, !desc.isEmpty else {
+                    showAlert(message: "Please fill in all criteria")
+                    return
+                }
+                    
+                guard desc.count <= 100 else {
+                    showAlert(message: "Description should not be larger than 100 characters")
+                    return
+                }
+                
+                // Core Data stack setup
+                guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+                    showAlert(message: "Error accessing Core Data")
+                    return
+                }
+                let managedContext = appDelegate.persistentContainer.viewContext
+                
+                // Creating TaskCategory managed object
+                if let taskCategoryEntity = NSEntityDescription.entity(forEntityName: "TaskCategory", in: managedContext) {
+                    let taskCategory = NSManagedObject(entity: taskCategoryEntity, insertInto: managedContext)
+                    
+                    // Setting attributes
+                    taskCategory.setValue(name, forKeyPath: "name")
+                    taskCategory.setValue(colour, forKeyPath: "color")
+                    taskCategory.setValue(desc, forKeyPath: "desc")
+                    
+                    // Saving the TaskCategory object
+                    do {
+                        try managedContext.save()
+                        showAlert(message: "Task Category \(name) created and saved")
+                    } catch let error as NSError {
+                        showAlert(message: "Could not save. \(error), \(error.userInfo)")
+                    }
+                } else {
+                    showAlert(message: "Entity description for TaskCategory not found.")
+                }    }
 
     func showAlert(message: String) {
         let alert = UIAlertController(title: nil, message: message, preferredStyle: .alert)

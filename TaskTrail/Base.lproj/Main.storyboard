@@ -132,40 +132,36 @@
         <!--Completed Tasks-->
         <scene sceneID="0fb-3a-VcL">
             <objects>
-                <viewController title="Completed Tasks" id="8qK-Y9-ieB" sceneMemberID="viewController">
+                <viewController title="Completed Tasks" id="8qK-Y9-ieB" customClass="CompletedTasksController" customModule="TaskTrail" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5X3-KJ-QuA">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="TaskTrail.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="AAS-2U-XUi">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TaskTrail.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="AAS-2U-XUi">
                                 <rect key="frame" x="16" y="91" width="60" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Completed Tasks" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="fLx-aB-8Ye">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Completed Tasks" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="fLx-aB-8Ye">
                                 <rect key="frame" x="84" y="95" width="264" height="48"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="264" id="L5U-9f-COb"/>
+                                </constraints>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wi2-3X-sHj">
-                                <rect key="frame" x="327" y="151" width="50" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" systemColor="systemIndigoColor"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="line.3.horizontal.decrease.circle.fill" catalog="system"/>
-                            </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="0JU-GZ-a76">
-                                <rect key="frame" x="16" y="189" width="361" height="567"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="0JU-GZ-a76">
+                                <rect key="frame" x="0.0" y="189" width="393" height="629"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="629" id="gnk-eH-amm"/>
+                                </constraints>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="81" id="ytf-7i-36s">
-                                        <rect key="frame" x="0.0" y="50" width="361" height="81"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="completedCell" rowHeight="81" id="ytf-7i-36s" customClass="CompletedCell" customModule="TaskTrail" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="81"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ytf-7i-36s" id="fbG-cd-5iN">
-                                            <rect key="frame" x="0.0" y="0.0" width="361" height="81"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="81"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="GENERIC TASK" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="2W6-zo-bNY">
@@ -190,6 +186,9 @@
                                                     <color key="tintColor" systemColor="systemRedColor"/>
                                                     <state key="normal" title="Button"/>
                                                     <buttonConfiguration key="configuration" style="plain" image="minus.circle.fill" catalog="system"/>
+                                                    <connections>
+                                                        <action selector="deleteButtonTapped:" destination="ytf-7i-36s" eventType="touchUpInside" id="5vt-kZ-se0"/>
+                                                    </connections>
                                                 </button>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="FITNESS" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="cf3-fN-U2u">
                                                     <rect key="frame" x="202" y="42" width="77" height="33"/>
@@ -206,14 +205,34 @@
                                                 </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="category" destination="cf3-fN-U2u" id="Swx-CM-LCa"/>
+                                            <outlet property="compDate" destination="FF7-bo-tm4" id="irp-uQ-JnN"/>
+                                            <outlet property="taskName" destination="2W6-zo-bNY" id="hYt-sB-apr"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="UFS-83-3sC"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="0JU-GZ-a76" firstAttribute="top" secondItem="fLx-aB-8Ye" secondAttribute="bottom" constant="46" id="57S-P2-VSv"/>
+                            <constraint firstItem="fLx-aB-8Ye" firstAttribute="top" secondItem="5X3-KJ-QuA" secondAttribute="topMargin" constant="-8" id="8kl-vr-5A0"/>
+                            <constraint firstItem="UFS-83-3sC" firstAttribute="trailing" secondItem="fLx-aB-8Ye" secondAttribute="trailing" constant="45" id="FyV-4o-hYl"/>
+                            <constraint firstItem="fLx-aB-8Ye" firstAttribute="leading" secondItem="AAS-2U-XUi" secondAttribute="trailing" constant="8" id="N51-cT-OBZ"/>
+                            <constraint firstItem="AAS-2U-XUi" firstAttribute="leading" secondItem="5X3-KJ-QuA" secondAttribute="leadingMargin" id="cY9-fG-a1v"/>
+                            <constraint firstItem="UFS-83-3sC" firstAttribute="trailing" secondItem="0JU-GZ-a76" secondAttribute="trailing" id="hp4-RA-YEb"/>
+                            <constraint firstItem="0JU-GZ-a76" firstAttribute="top" secondItem="AAS-2U-XUi" secondAttribute="bottom" constant="38" id="iUm-rG-Ae4"/>
+                            <constraint firstItem="UFS-83-3sC" firstAttribute="bottom" secondItem="0JU-GZ-a76" secondAttribute="bottom" id="jgG-n1-dR2"/>
+                            <constraint firstItem="AAS-2U-XUi" firstAttribute="top" secondItem="5X3-KJ-QuA" secondAttribute="topMargin" constant="-12" id="q5r-fV-Js6"/>
+                            <constraint firstItem="0JU-GZ-a76" firstAttribute="leading" secondItem="UFS-83-3sC" secondAttribute="leading" id="sQS-c9-aQd"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="LHi-Va-XkH"/>
+                    <connections>
+                        <outlet property="taskTable" destination="0JU-GZ-a76" id="LY2-O6-1Fk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VcO-HG-BjM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -222,74 +241,43 @@
         <!--Milestones-->
         <scene sceneID="CsS-Xk-LpK">
             <objects>
-                <viewController title="Milestones" id="nkX-LJ-Apq" sceneMemberID="viewController">
+                <viewController title="Milestones" id="nkX-LJ-Apq" customClass="MilestoneController" customModule="TaskTrail" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="AU7-1O-PIR">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="TaskTrail.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="gyT-c8-2Mr">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.40000000000000002" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="TaskTrail.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="gyT-c8-2Mr">
                                 <rect key="frame" x="16" y="91" width="60" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Milestones" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Uln-s0-98f">
                                 <rect key="frame" x="84" y="95" width="264" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" systemColor="systemGray5Color"/>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="tLK-M5-qE8">
-                                <rect key="frame" x="16" y="187" width="361" height="567"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Inspirational.png" translatesAutoresizingMaskIntoConstraints="NO" id="RUr-V5-EoF">
+                                <rect key="frame" x="32" y="426" width="328" height="302"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.69999999999999996" contentMode="scaleToFill" fixedFrame="YES" text="As of today you have completed many Milestones. Great job." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="OnG-1K-shI">
+                                <rect key="frame" x="0.0" y="197" width="393" height="195"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="81" id="5yb-Zr-ffN">
-                                        <rect key="frame" x="0.0" y="50" width="361" height="81"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5yb-Zr-ffN" id="Aat-Gl-Z40">
-                                            <rect key="frame" x="0.0" y="0.0" width="361" height="81"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="MILESTONE COMPLETED" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="z7u-Gh-1Zx">
-                                                    <rect key="frame" x="20" y="4" width="203" height="50"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                    <color key="textColor" systemColor="labelColor"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                                </textView>
-                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Completed on 31/12/2099" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="H15-Tc-lXJ">
-                                                    <rect key="frame" x="20" y="44" width="187" height="50"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                    <color key="textColor" systemColor="labelColor"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                                </textView>
-                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="FITNESS" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="83u-er-W9f">
-                                                    <rect key="frame" x="202" y="42" width="77" height="33"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                    <color key="textColor" systemColor="labelColor"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                                </textView>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="trophy.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="GaD-H5-37F">
-                                                    <rect key="frame" x="311" y="12" width="50" height="58"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <color key="tintColor" systemColor="systemYellowColor"/>
-                                                </imageView>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
-                            </tableView>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="3Hz-gv-U6K"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemGray5Color"/>
                     </view>
                     <navigationItem key="navigationItem" id="Gr7-rZ-DRz"/>
+                    <connections>
+                        <outlet property="words" destination="OnG-1K-shI" id="mjU-gp-5dr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EZE-Yu-GvT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -303,21 +291,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="TaskTrail.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="0gp-bW-WZ9">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TaskTrail.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="0gp-bW-WZ9">
                                 <rect key="frame" x="16" y="91" width="60" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="2O5-Fc-TNY"/>
+                                    <constraint firstAttribute="height" constant="60" id="76V-Ej-3ML"/>
+                                </constraints>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Current Tasks" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="rY6-Zj-8W1">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Current Tasks" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="rY6-Zj-8W1">
                                 <rect key="frame" x="84" y="95" width="264" height="48"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="pUJ-ii-i9J"/>
+                                </constraints>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jc1-8f-NeC">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jc1-8f-NeC">
                                 <rect key="frame" x="327" y="151" width="50" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" systemColor="systemGreenColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="plus.circle.fill" catalog="system"/>
@@ -325,27 +317,19 @@
                                     <segue destination="hTQ-Sd-TzR" kind="show" id="w4S-23-WSs"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iZQ-Wd-Ge3">
-                                <rect key="frame" x="285" y="151" width="50" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" systemColor="systemIndigoColor"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="line.3.horizontal.decrease.circle.fill" catalog="system"/>
-                            </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Ndc-Mb-Rri">
-                                <rect key="frame" x="16" y="179" width="361" height="567"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Ndc-Mb-Rri">
+                                <rect key="frame" x="0.0" y="186" width="393" height="632"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="81" id="WKY-Im-6wE" customClass="TaskCell">
-                                        <rect key="frame" x="0.0" y="50" width="361" height="81"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="taskCell" rowHeight="85" id="WKY-Im-6wE" customClass="TableViewTaskCell" customModule="TaskTrail" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="85"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="WKY-Im-6wE" id="XP7-eK-fb5">
-                                            <rect key="frame" x="0.0" y="0.0" width="361" height="81"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="85"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="GENERIC TASK" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="T89-cD-Qen">
-                                                    <rect key="frame" x="20" y="8" width="166" height="32"/>
+                                                    <rect key="frame" x="29" y="7" width="196" height="32"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                     <color key="textColor" systemColor="labelColor"/>
@@ -353,7 +337,7 @@
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                 </textView>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Due by 31/12/2099" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="wMk-rg-IGw">
-                                                    <rect key="frame" x="20" y="48" width="166" height="33"/>
+                                                    <rect key="frame" x="29" y="42" width="166" height="33"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                     <color key="textColor" systemColor="labelColor"/>
@@ -361,52 +345,85 @@
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                 </textView>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="100" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="tZq-e1-HD4">
-                                                    <rect key="frame" x="286" y="10" width="37" height="33"/>
+                                                    <rect key="frame" x="286" y="6" width="37" height="33"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                     <color key="textColor" systemColor="labelColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                 </textView>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="smiley.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="agx-pb-PQL">
-                                                    <rect key="frame" x="240" y="10" width="45" height="29"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="face.smiling.inverse" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="agx-pb-PQL">
+                                                    <rect key="frame" x="233" y="6" width="45" height="29"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="tintColor" systemColor="systemYellowColor"/>
                                                 </imageView>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gee-bU-jRW">
+                                                    <rect key="frame" x="321" y="6" width="55" height="35"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="tintColor" systemColor="systemGreenColor"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="plain" image="checkmark.square" catalog="system"/>
+                                                    <connections>
+                                                        <action selector="checkmarkButtonTapped:" destination="WKY-Im-6wE" eventType="touchUpInside" id="eaQ-jN-j2b"/>
+                                                    </connections>
+                                                </button>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="FITNESS" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="cOr-OJ-GM5">
+                                                    <rect key="frame" x="255" y="40" width="77" height="33"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                    <color key="textColor" systemColor="labelColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kgj-dN-V6g">
-                                                    <rect key="frame" x="318" y="46" width="50" height="35"/>
+                                                    <rect key="frame" x="323" y="40" width="50" height="35"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="tintColor" systemColor="systemRedColor"/>
                                                     <state key="normal" title="Button"/>
                                                     <buttonConfiguration key="configuration" style="plain" image="minus.circle.fill" catalog="system"/>
+                                                    <connections>
+                                                        <action selector="deleteTaskButtonTapped:" destination="WKY-Im-6wE" eventType="touchUpInside" id="GTj-lt-qhD"/>
+                                                    </connections>
                                                 </button>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gee-bU-jRW">
-                                                    <rect key="frame" x="309" y="8" width="55" height="35"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="placeholdertext.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Wh1-Bb-Mri">
+                                                    <rect key="frame" x="9" y="0.0" width="19" height="75"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <color key="tintColor" systemColor="systemGreenColor"/>
-                                                    <state key="normal" title="Button"/>
-                                                    <buttonConfiguration key="configuration" style="plain" image="checkmark.rectangle" catalog="system"/>
-                                                </button>
-                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="FITNESS" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="cOr-OJ-GM5">
-                                                    <rect key="frame" x="233" y="46" width="77" height="33"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                    <color key="textColor" systemColor="labelColor"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                                </textView>
+                                                </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="category" destination="cOr-OJ-GM5" id="t5u-BX-E1t"/>
+                                            <outlet property="checkmark" destination="gee-bU-jRW" id="XhP-tR-MT2"/>
+                                            <outlet property="colorDisplay" destination="Wh1-Bb-Mri" id="A0i-Zy-qa3"/>
+                                            <outlet property="deleteTask" destination="kgj-dN-V6g" id="Ano-hp-xjg"/>
+                                            <outlet property="difficulty" destination="agx-pb-PQL" id="3ZQ-CW-p5Q"/>
+                                            <outlet property="dueDate" destination="wMk-rg-IGw" id="HF7-hv-CRz"/>
+                                            <outlet property="priority" destination="tZq-e1-HD4" id="Qw3-7V-F2n"/>
+                                            <outlet property="taskName" destination="T89-cD-Qen" id="aP6-01-Uyk"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="2I9-MS-A17"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Jc1-8f-NeC" firstAttribute="top" secondItem="rY6-Zj-8W1" secondAttribute="bottom" constant="8" symbolic="YES" id="05V-wl-XGa"/>
+                            <constraint firstItem="Ndc-Mb-Rri" firstAttribute="leading" secondItem="2I9-MS-A17" secondAttribute="leading" id="7zB-87-r0F"/>
+                            <constraint firstItem="0gp-bW-WZ9" firstAttribute="leading" secondItem="oFz-ah-XW1" secondAttribute="leadingMargin" id="81q-tJ-Fmp"/>
+                            <constraint firstItem="2I9-MS-A17" firstAttribute="bottom" secondItem="Ndc-Mb-Rri" secondAttribute="bottom" id="CVz-BI-ziE"/>
+                            <constraint firstItem="rY6-Zj-8W1" firstAttribute="top" secondItem="oFz-ah-XW1" secondAttribute="topMargin" constant="-8" id="Fe6-YV-BAn"/>
+                            <constraint firstItem="Ndc-Mb-Rri" firstAttribute="top" secondItem="0gp-bW-WZ9" secondAttribute="bottom" constant="35" id="IDd-pt-9XL"/>
+                            <constraint firstItem="2I9-MS-A17" firstAttribute="trailing" secondItem="Ndc-Mb-Rri" secondAttribute="trailing" id="LwK-q8-6FZ"/>
+                            <constraint firstItem="0gp-bW-WZ9" firstAttribute="top" secondItem="oFz-ah-XW1" secondAttribute="topMargin" constant="-12" id="P1V-nL-wbK"/>
+                            <constraint firstItem="2I9-MS-A17" firstAttribute="trailing" secondItem="rY6-Zj-8W1" secondAttribute="trailing" constant="45" id="R4d-ZX-14d"/>
+                            <constraint firstItem="Jc1-8f-NeC" firstAttribute="trailing" secondItem="oFz-ah-XW1" secondAttribute="trailingMargin" id="hPD-KO-B6g"/>
+                            <constraint firstItem="rY6-Zj-8W1" firstAttribute="leading" secondItem="0gp-bW-WZ9" secondAttribute="trailing" constant="8" symbolic="YES" id="iKz-AW-kuJ"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="PTM-YF-pf4"/>
                     <connections>
-                        <outlet property="table" destination="Ndc-Mb-Rri" id="3ue-BQ-NZi"/>
+                        <outlet property="taskTable" destination="Ndc-Mb-Rri" id="uFy-LN-uJ0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qv3-Oo-HGu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -416,7 +433,7 @@
         <!--Create Task-->
         <scene sceneID="63B-sQ-m5t">
             <objects>
-                <viewController title="Create Task" id="hTQ-Sd-TzR" sceneMemberID="viewController">
+                <viewController title="Create Task" id="hTQ-Sd-TzR" customClass="TaskCreateController" customModule="TaskTrail" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="EdS-Fy-c8K">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -438,6 +455,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Create"/>
+                                <connections>
+                                    <action selector="createButtonTapped:" destination="hTQ-Sd-TzR" eventType="touchUpInside" id="Xxd-i6-QQK"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="330-LA-K9H">
                                 <rect key="frame" x="223" y="752" width="77" height="35"/>
@@ -445,6 +465,9 @@
                                 <color key="tintColor" systemColor="systemRedColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Cancel"/>
+                                <connections>
+                                    <action selector="cancelButtonTapped:" destination="hTQ-Sd-TzR" eventType="touchUpInside" id="Qyd-Xp-ghg"/>
+                                </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="TASK NAME" textAlignment="right" translatesAutoresizingMaskIntoConstraints="NO" id="Fdt-7a-hCT">
                                 <rect key="frame" x="16" y="204" width="115" height="62"/>
@@ -510,8 +533,16 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kin-Xx-uzp">
-                                <rect key="frame" x="139" y="457" width="223" height="34"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Type Description: " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="jzp-0T-FbU">
+                                <rect key="frame" x="39" y="509" width="309" height="142"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fMU-Tb-6hP">
+                                <rect key="frame" x="139" y="448" width="223" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -521,6 +552,16 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="wyb-ZO-2Io"/>
+                    <connections>
+                        <outlet property="cancelButton" destination="330-LA-K9H" id="yOQ-2a-DQw"/>
+                        <outlet property="createButton" destination="Uiw-yp-Pc7" id="5mM-Ad-Kdh"/>
+                        <outlet property="difficulty" destination="gLK-dc-fuC" id="REQ-Um-tUH"/>
+                        <outlet property="dueDate" destination="ROn-1w-9cq" id="dc5-QU-o51"/>
+                        <outlet property="priority" destination="xRH-aK-7xR" id="6PD-2R-OkD"/>
+                        <outlet property="taskName" destination="MFJ-GY-74E" id="NRd-l5-1pB"/>
+                        <outlet property="taskType" destination="fMU-Tb-6hP" id="LLb-Hv-kh5"/>
+                        <outlet property="typeDesc" destination="jzp-0T-FbU" id="IaI-HD-aS7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qAN-EG-taQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -724,14 +765,14 @@
     </scenes>
     <resources>
         <image name="GBCLogo.png" width="1200" height="775"/>
+        <image name="Inspirational.png" width="644" height="634"/>
         <image name="TaskTrail.jpg" width="768" height="768"/>
-        <image name="checkmark.rectangle" catalog="system" width="128" height="93"/>
-        <image name="line.3.horizontal.decrease.circle.fill" catalog="system" width="128" height="123"/>
+        <image name="checkmark.square" catalog="system" width="128" height="114"/>
+        <image name="face.smiling.inverse" catalog="system" width="128" height="123"/>
         <image name="medal" catalog="system" width="121" height="128"/>
         <image name="minus.circle.fill" catalog="system" width="128" height="123"/>
+        <image name="placeholdertext.fill" catalog="system" width="78" height="128"/>
         <image name="plus.circle.fill" catalog="system" width="128" height="123"/>
-        <image name="smiley.fill" catalog="system" width="128" height="123"/>
-        <image name="trophy.fill" catalog="system" width="128" height="128"/>
         <systemColor name="groupTableViewBackgroundColor">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
@@ -741,17 +782,20 @@
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemGray6Color">
-            <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGreenColor">
-            <color red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemIndigoColor">
-            <color red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemYellowColor">
             <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

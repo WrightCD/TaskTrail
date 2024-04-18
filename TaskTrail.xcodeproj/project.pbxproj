@@ -18,11 +18,15 @@
 		D70A7D612B8E9D8900DCD95B /* TaskTrailUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70A7D602B8E9D8900DCD95B /* TaskTrailUITestsLaunchTests.swift */; };
 		D70A7D6E2B8EA1CC00DCD95B /* TaskTrail.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D70A7D6D2B8EA1CC00DCD95B /* TaskTrail.jpg */; };
 		D70A7D702B8EA5F000DCD95B /* GBCLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = D70A7D6F2B8EA5F000DCD95B /* GBCLogo.png */; };
-		D70BE0EE2BB24A3900A363FA /* TrailTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70BE0ED2BB24A3900A363FA /* TrailTask.swift */; };
-		D70BE0F02BB24A6200A363FA /* TrailCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70BE0EF2BB24A6200A363FA /* TrailCategory.swift */; };
 		D70BE0F22BB2502B00A363FA /* TaskTypeMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70BE0F12BB2502B00A363FA /* TaskTypeMaker.swift */; };
+		D745B06D2BD0BE2400429B1A /* Inspirational.png in Resources */ = {isa = PBXBuildFile; fileRef = D745B06C2BD0BE2400429B1A /* Inspirational.png */; };
+		D7A209332BCF6BE500ADE9C7 /* CompletedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A209322BCF6BE500ADE9C7 /* CompletedCell.swift */; };
+		D7A209372BCF70A500ADE9C7 /* MilestoneController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A209362BCF70A500ADE9C7 /* MilestoneController.swift */; };
+		D7A2093A2BCF71B500ADE9C7 /* Data.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D7A209382BCF71B500ADE9C7 /* Data.xcdatamodeld */; };
+		D7A2093C2BD08A2A00ADE9C7 /* TaskCreateController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A2093B2BD08A2A00ADE9C7 /* TaskCreateController.swift */; };
 		D7A8122C2B8EB68800166D4B /* TaskListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A8122B2B8EB68800166D4B /* TaskListController.swift */; };
-		D7A8122E2B8EB6A800166D4B /* TaskCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A8122D2B8EB6A800166D4B /* TaskCell.swift */; };
+		D7D546EC2BCF55D300643E90 /* TableViewTaskCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D546EB2BCF55D300643E90 /* TableViewTaskCell.swift */; };
+		D7D546F02BCF664E00643E90 /* CompletedTasksController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D546EF2BCF664E00643E90 /* CompletedTasksController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,13 +60,17 @@
 		D70A7D5A2B8E9D8900DCD95B /* TaskTrailUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TaskTrailUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D70A7D5E2B8E9D8900DCD95B /* TaskTrailUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTrailUITests.swift; sourceTree = "<group>"; };
 		D70A7D602B8E9D8900DCD95B /* TaskTrailUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTrailUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		D70A7D6D2B8EA1CC00DCD95B /* TaskTrail.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = TaskTrail.jpg; path = ../../../../Downloads/TaskTrail.jpg; sourceTree = "<group>"; };
-		D70A7D6F2B8EA5F000DCD95B /* GBCLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = GBCLogo.png; path = ../../../../Downloads/GBCLogo.png; sourceTree = "<group>"; };
-		D70BE0ED2BB24A3900A363FA /* TrailTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrailTask.swift; sourceTree = "<group>"; };
-		D70BE0EF2BB24A6200A363FA /* TrailCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrailCategory.swift; sourceTree = "<group>"; };
+		D70A7D6D2B8EA1CC00DCD95B /* TaskTrail.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = TaskTrail.jpg; sourceTree = "<group>"; };
+		D70A7D6F2B8EA5F000DCD95B /* GBCLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GBCLogo.png; sourceTree = "<group>"; };
 		D70BE0F12BB2502B00A363FA /* TaskTypeMaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTypeMaker.swift; sourceTree = "<group>"; };
+		D745B06B2BD0BE2400429B1A /* Base */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Base; path = Base.lproj/Inspirational.png; sourceTree = "<group>"; };
+		D7A209322BCF6BE500ADE9C7 /* CompletedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletedCell.swift; sourceTree = "<group>"; };
+		D7A209362BCF70A500ADE9C7 /* MilestoneController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MilestoneController.swift; sourceTree = "<group>"; };
+		D7A209392BCF71B500ADE9C7 /* Data.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Data.xcdatamodel; sourceTree = "<group>"; };
+		D7A2093B2BD08A2A00ADE9C7 /* TaskCreateController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCreateController.swift; sourceTree = "<group>"; };
 		D7A8122B2B8EB68800166D4B /* TaskListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListController.swift; sourceTree = "<group>"; };
-		D7A8122D2B8EB6A800166D4B /* TaskCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCell.swift; sourceTree = "<group>"; };
+		D7D546EB2BCF55D300643E90 /* TableViewTaskCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewTaskCell.swift; sourceTree = "<group>"; };
+		D7D546EF2BCF664E00643E90 /* CompletedTasksController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletedTasksController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,15 +121,19 @@
 		D70A7D3C2B8E9D8700DCD95B /* TaskTrail */ = {
 			isa = PBXGroup;
 			children = (
+				D745B06C2BD0BE2400429B1A /* Inspirational.png */,
 				D70A7D3D2B8E9D8700DCD95B /* AppDelegate.swift */,
 				D70A7D3F2B8E9D8700DCD95B /* SceneDelegate.swift */,
 				D70A7D412B8E9D8700DCD95B /* ViewController.swift */,
 				D70A7D432B8E9D8700DCD95B /* Main.storyboard */,
+				D7A2093B2BD08A2A00ADE9C7 /* TaskCreateController.swift */,
+				D7D546EF2BCF664E00643E90 /* CompletedTasksController.swift */,
+				D7A209362BCF70A500ADE9C7 /* MilestoneController.swift */,
+				D7A209382BCF71B500ADE9C7 /* Data.xcdatamodeld */,
+				D7D546EB2BCF55D300643E90 /* TableViewTaskCell.swift */,
+				D7A209322BCF6BE500ADE9C7 /* CompletedCell.swift */,
 				D70BE0F12BB2502B00A363FA /* TaskTypeMaker.swift */,
-				D70BE0ED2BB24A3900A363FA /* TrailTask.swift */,
-				D70BE0EF2BB24A6200A363FA /* TrailCategory.swift */,
 				D7A8122B2B8EB68800166D4B /* TaskListController.swift */,
-				D7A8122D2B8EB6A800166D4B /* TaskCell.swift */,
 				D70A7D462B8E9D8800DCD95B /* Assets.xcassets */,
 				D70A7D6F2B8EA5F000DCD95B /* GBCLogo.png */,
 				D70A7D6D2B8EA1CC00DCD95B /* TaskTrail.jpg */,
@@ -255,6 +267,7 @@
 				D70A7D4A2B8E9D8800DCD95B /* LaunchScreen.storyboard in Resources */,
 				D70A7D472B8E9D8800DCD95B /* Assets.xcassets in Resources */,
 				D70A7D702B8EA5F000DCD95B /* GBCLogo.png in Resources */,
+				D745B06D2BD0BE2400429B1A /* Inspirational.png in Resources */,
 				D70A7D452B8E9D8700DCD95B /* Main.storyboard in Resources */,
 				D70A7D6E2B8EA1CC00DCD95B /* TaskTrail.jpg in Resources */,
 			);
@@ -282,13 +295,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				D70A7D422B8E9D8700DCD95B /* ViewController.swift in Sources */,
-				D70BE0EE2BB24A3900A363FA /* TrailTask.swift in Sources */,
 				D70A7D3E2B8E9D8700DCD95B /* AppDelegate.swift in Sources */,
+				D7A209332BCF6BE500ADE9C7 /* CompletedCell.swift in Sources */,
+				D7A2093C2BD08A2A00ADE9C7 /* TaskCreateController.swift in Sources */,
 				D70BE0F22BB2502B00A363FA /* TaskTypeMaker.swift in Sources */,
-				D70BE0F02BB24A6200A363FA /* TrailCategory.swift in Sources */,
 				D7A8122C2B8EB68800166D4B /* TaskListController.swift in Sources */,
+				D7D546F02BCF664E00643E90 /* CompletedTasksController.swift in Sources */,
+				D7A209372BCF70A500ADE9C7 /* MilestoneController.swift in Sources */,
+				D7A2093A2BCF71B500ADE9C7 /* Data.xcdatamodeld in Sources */,
+				D7D546EC2BCF55D300643E90 /* TableViewTaskCell.swift in Sources */,
 				D70A7D402B8E9D8700DCD95B /* SceneDelegate.swift in Sources */,
-				D7A8122E2B8EB6A800166D4B /* TaskCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,6 +355,14 @@
 				D70A7D492B8E9D8800DCD95B /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		D745B06C2BD0BE2400429B1A /* Inspirational.png */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D745B06B2BD0BE2400429B1A /* Base */,
+			);
+			name = Inspirational.png;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -629,6 +653,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		D7A209382BCF71B500ADE9C7 /* Data.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				D7A209392BCF71B500ADE9C7 /* Data.xcdatamodel */,
+			);
+			currentVersion = D7A209392BCF71B500ADE9C7 /* Data.xcdatamodel */;
+			name = Data.xcdatamodeld;
+			path = /Users/carlwright/Documents/MobileAppII/TaskTrail/TaskTrail/Data.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = D70A7D322B8E9D8700DCD95B /* Project object */;
 }
